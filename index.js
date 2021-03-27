@@ -46,7 +46,7 @@ app.get('/student',  async (req,res) => {
 
 // to create new student
 
-app.post('/student',  async (req,res) => {
+app.post('/create-student',  async (req,res) => {
     try{
       
      let client = await mongoClient.connect(dburl);
@@ -64,7 +64,7 @@ app.post('/student',  async (req,res) => {
 
 // to create new mentor
 
-app.post('/mentor',  async (req,res) => {
+app.post('/create-mentor',  async (req,res) => {
     try{
       
      let client = await mongoClient.connect(dburl);
