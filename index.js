@@ -8,8 +8,8 @@ const mongoClient = mongodb.MongoClient;
 app.use(express.json())
 //let dburl="mongodb://127.0.0.1:27017";
 const objectid = mongodb.ObjectID;
-const dburl ="mongodb://127.0.0.1:27017"|| process.env.DB_URL;
-const PORT = process.env.PORT || "4000"
+const dburl =process.env.DB_URL || "mongodb://127.0.0.1:27017";
+const port = process.env.PORT || 4000
 console.log(dburl);
 
 // get student,mentor data
@@ -233,4 +233,4 @@ app.delete('/mentor/:id', async (req,res) => {
  
 
 
-app.listen('4000',()=>{console.log('server running successfully on port 4000')});
+app.listen(port,()=>{console.log(`server running successfully on port ${port}`)});
