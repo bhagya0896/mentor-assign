@@ -12,7 +12,7 @@ const dburl =process.env.DB_URL || "mongodb://127.0.0.1:27017";
 const port = process.env.PORT || 4000
 console.log(dburl);
 
-// get student,mentor data
+//Api to get student,mentor data
 
 app.get('/student',  async (req,res) => {
     try{
@@ -44,7 +44,7 @@ app.get('/student',  async (req,res) => {
     }  
  });
 
-// to create new student
+//Api to create new student
 
 app.post('/create-student',  async (req,res) => {
     try{
@@ -62,7 +62,7 @@ app.post('/create-student',  async (req,res) => {
  });
 
 
-// to create new mentor
+// Api to create new mentor
 
 app.post('/create-mentor',  async (req,res) => {
     try{
@@ -80,7 +80,7 @@ app.post('/create-mentor',  async (req,res) => {
  });
 
 
-// to get student and mentor data with id
+// Api to get student and mentor data with id
 
 app.get('/student/:id', async (req,res) => {
     try{
@@ -120,7 +120,7 @@ app.get('/student/:id', async (req,res) => {
  });
 
 
-// assign or change mentor of a particular student
+// Api to assign or change mentor of a particular student
 
 app.patch('/student/:id/assign-mentor', async (req,res) => {
     try{
@@ -143,7 +143,7 @@ app.patch('/student/:id/assign-mentor', async (req,res) => {
  });
 
 
-// assigning multiple student to mentor
+// Api to assig multiple students to mentor
 
 app.patch('/mentor/:id/assign-student', async(req,res)=>
 {
@@ -168,7 +168,7 @@ app.patch('/mentor/:id/assign-student', async(req,res)=>
 });
 
 
-// show all student of particular mentor
+// Api to show all students of a particular mentor
 
 
 app.get('/mentor/:id/studentlist', async (req,res) => {
@@ -189,7 +189,7 @@ app.get('/mentor/:id/studentlist', async (req,res) => {
   
  });
 
-// delete particular  mentor or student
+// Api to delete particular  mentor or student
 
 
 
