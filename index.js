@@ -15,7 +15,7 @@ console.log(dburl);
 
 
 app.get('/',   (req,res) => {
-res.send({"message":"Welcome!!!!"});
+res.send({"message":"Welcome!!!!"})});
  
 
 //Api to get student,mentor data
