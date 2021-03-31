@@ -12,6 +12,12 @@ const dburl =process.env.DB_URL || "mongodb://127.0.0.1:27017";
 const port = process.env.PORT || 4000
 console.log(dburl);
 
+
+
+app.get('/',   (req,res) => {
+res.send({"message":"Welcome!!!!"});
+ 
+
 //Api to get student,mentor data
 
 app.get('/student',  async (req,res) => {
